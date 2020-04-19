@@ -1,0 +1,32 @@
+@import "fonts/stylesheet.css";
+
+body {
+    background-color: #011F3F;
+    text-align: center;
+    padding: 20px;
+}
+h1 {
+    color: #FEF2BF;
+    font-family: press_start_2pregular, sans-serif;
+}
+.btn {
+    color: red;
+    height: 125px;
+    width: 125px;
+    border-radius: 15%;
+    border: 5px solid black;
+    margin: 15px;
+}
+
+#green {
+    background-color: green;
+}
+#red {
+    background-color: red;
+}
+#yellow {
+    background-color: yellow;
+}
+#blue {
+    background-color: blue;
+}
