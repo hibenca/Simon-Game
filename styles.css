@@ -17,19 +17,15 @@ h1 {
     border: 5px solid black;
     margin: 15px;
 }
-.pressed {
-    box-shadow: 0 3px 4px 0 #DBEDF3;
-    opacity: 0.5;
-}
-#green {
+.green {
     background-color: green;
 }
-#red {
+.red {
     background-color: red;
 }
-#yellow {
+.yellow {
     background-color: yellow;
 }
-#blue {
+.blue {
     background-color: blue;
 }
