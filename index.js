@@ -9,6 +9,24 @@ let gamePattern = [];
 // Users pattern
 let userClickedPattern = [];
 
+// User click sequence
+$('.btn').on("click", function () {
+    let userChosenColour = $(this).attr('id');
+    userClickedPattern.push(userChosenColour);
+
+    // Play sound
+    playSound(userChosenColour);
+
+    // Animation
+    animatePress(userChosenColour);
+});
+
+// Starting the game... in progress
+$(document).keypress(function (event) {
+    console.log(event.key)
+})
+
+
 // Game sequence
 function nextSequence() {
 
@@ -24,22 +42,15 @@ function nextSequence() {
     playSound(randomChosenColour);
 }
 
-// User click sequence
-$('.btn').on("click", function () {
-    let userChosenColour = $(this).attr('id');
-    userClickedPattern.push(userChosenColour);
-
-    // Play sound
-    playSound(userChosenColour);
-});
-
-
 // Play button sound
 function playSound(name) {
     new Audio("sounds/" + name + ".mp3").play();
 }
 
-// Animation... in progress
+// Button click animation
 function animatePress(currentColour) {
-    $('.btn').addClass("pressed").setTimeout($(".btn").removeClass("pressed"), 1100)
+    $('#' + currentColour).addClass("pressed")
+    setTimeout(function() {
+        $('#' + currentColour).removeClass("pressed")
+    }, 100);
 }
